@@ -18,6 +18,7 @@ echo '<br />';
 
     </head>
     <body>
+    <a href="L5list.php">Назад к списку тестов</a>
     <form action="" method="POST">
 
         <?php for ($i = 0; $i < count($base); $i++) {
@@ -45,8 +46,7 @@ if (!empty($_POST)) {
     }
     for ($z = 0; $z < count($base); $z++) {
         $countAnswerText = $z + 1;
-        $countAnswerReal = 'q'.$z;
-        //$countAnswer = $base[$z][2];
+        $countAnswerReal = 'q' . $z;
         if ($answers[$countAnswerReal] == $base[$z][1][$base[$z][2]]) {
             echo 'Ответ ' . $countAnswerText . ' - верный' . '<br />';
         } else {
